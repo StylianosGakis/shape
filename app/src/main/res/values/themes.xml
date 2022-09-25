@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <!-- Allows us to override night specific attributes in the values-night folder. -->
+  <style name="NightAdjusted.Theme.Shape" parent="android:Theme.Material.Light.NoActionBar">
+    <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+    <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+  </style>
+
+  <!-- Allows us to override platform level specific attributes in their respective values-vXX folder. -->
+  <style name="PlatformAdjusted.Theme.Shape" parent="NightAdjusted.Theme.Shape">
+    <item name="android:statusBarColor">@color/black30</item>
+  </style>
+
+  <!-- The final theme -->
+  <style name="Theme.Shape" parent="PlatformAdjusted.Theme.Shape" />
+
+  <style name="NightAdjusted.Theme.Splash" parent="Theme.SplashScreen">
+    <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+    <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+  </style>
+
+  <style name="Theme.Shape.Splash" parent="NightAdjusted.Theme.Splash">
+    <item name="windowSplashScreenBackground">@color/splash_background</item>
+    <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+    <item name="postSplashScreenTheme">@style/Theme.Shape</item>
+  </style>
+
+</resources>

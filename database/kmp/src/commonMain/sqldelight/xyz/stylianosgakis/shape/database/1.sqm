@@ -1,0 +1,15 @@
+CREATE TABLE achievement_new (
+  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  full_name TEXT NOT NULL,
+  achievement_group TEXT NOT NULL
+);
+
+INSERT INTO achievement_new
+(id, full_name, achievement_group)
+SELECT id, full_name, "Workout"
+FROM achievement;
+
+DROP TABLE achievement;
+
+ALTER TABLE achievement_new
+RENAME TO achievement;

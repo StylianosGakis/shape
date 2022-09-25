@@ -1,0 +1,24 @@
+CREATE TABLE achievement (
+  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  full_name TEXT NOT NULL,
+  achievement_group TEXT NOT NULL
+);
+
+selectAll:
+SELECT *
+FROM achievement;
+
+-- noinspection UnusedQuery
+selectByName:
+SELECT *
+FROM achievement
+WHERE full_name LIKE ('% ' || :name)
+OR full_name LIKE (:name || ' %');
+
+addAchievement:
+INSERT INTO achievement(full_name, achievement_group)
+VALUES (:name, "Workout");
+
+removeAchievement:
+DELETE FROM achievement
+WHERE id = :id;

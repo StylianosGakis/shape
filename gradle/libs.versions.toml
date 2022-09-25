@@ -1,0 +1,89 @@
+[versions]
+# androidSdkVersions
+compileSdkVersion = "33"
+targetSdkVersion = "33"
+minSdkVersion = "21"
+
+accompanist = "0.29.1-alpha"
+androidGradlePlugin = "7.4.1"
+androidx-compose-navigationTesting = "2.6.0-alpha05"
+androidx-composeBom = "2023.01.00"
+androidx-composeCompiler = "1.4.0-alpha02"
+androidx-core-splashScreen = "1.0.0"
+androidx-lifecycle-common = "2.5.1"
+androidx-lifecycle-compose = "2.5.1"
+androidx-navigation = "2.6.0-alpha05"
+androidx-other-activityCompose = "1.6.1"
+androidx-test-espresso = "3.5.1"
+androidx-test-junit = "1.1.5"
+androidx-test-rules = "1.5.0"
+androidx-test-runner = "1.5.2"
+coreLibraryDesugaring = "2.0.2"
+coroutines = "1.6.4"
+dependencyAnalysis = "1.13.1"
+junit = "4.13.2"
+kotlin = "1.7.21"
+kotlinx-immutable-collections = "0.3.5"
+molecule = "0.7.0"
+sqldelight = "1.5.5"
+square-logcat = "0.1"
+whetstone = "0.4.0"
+
+[libraries]
+
+accompanist-navigation-animation = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "accompanist" }
+accompanist-navigation-material = { module = "com.google.accompanist:accompanist-navigation-material", version.ref = "accompanist" }
+accompanist-systemUiController = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist" }
+androidx-compose-animation = { module = "androidx.compose.animation:animation" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidx-composeBom" }
+androidx-compose-foundation = { module = "androidx.compose.foundation:foundation" }
+androidx-compose-material3 = { module = "androidx.compose.material3:material3" }
+androidx-compose-material3WindowSizeClass = { module = "androidx.compose.material3:material3-window-size-class" }
+androidx-compose-materialIconsExtended = { module = "androidx.compose.material:material-icons-extended" }
+androidx-compose-navigation-testing = { module = "androidx.navigation:navigation-testing", version.ref = "androidx-compose-navigationTesting" }
+androidx-compose-runtime = { module = "androidx.compose.runtime:runtime" }
+androidx-compose-ui = { module = "androidx.compose.ui:ui" }
+androidx-compose-uiTest = { module = "androidx.compose.ui:ui-test" }
+androidx-compose-uiTestJunit4 = { module = "androidx.compose.ui:ui-test-junit4" }
+androidx-compose-uiTestManifest = { module = "androidx.compose.ui:ui-test-manifest" }
+androidx-compose-uiTooling = { module = "androidx.compose.ui:ui-tooling" }
+androidx-core-splashScreen = { module = "androidx.core:core-splashscreen", version.ref = "androidx-core-splashScreen" }
+androidx-lifecycle-common = { module = "androidx.lifecycle:lifecycle-common-java8", version.ref = "androidx-lifecycle-common" }
+androidx-lifecycle-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle-compose" }
+androidx-lifecycle-process = { module = "androidx.lifecycle:lifecycle-process", version.ref = "androidx-lifecycle-common" }
+androidx-lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidx-lifecycle-common" }
+androidx-lifecycle-viewModel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle-common" }
+androidx-navigation-common = { module = "androidx.navigation:navigation-common", version.ref = "androidx-navigation" }
+androidx-other-activityCompose = { module = "androidx.activity:activity-compose", version.ref = "androidx-other-activityCompose" }
+androidx-test-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "androidx-test-espresso" }
+androidx-test-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-test-junit" }
+androidx-test-rules = { module = "androidx.test:rules", version.ref = "androidx-test-rules" }
+androidx-test-runner = { module = "androidx.test:runner", version.ref = "androidx-test-runner" }
+coreLibraryDesugaring = { module = "com.android.tools:desugar_jdk_libs", version.ref = "coreLibraryDesugaring" }
+coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+junit = { module = "junit:junit", version.ref = "junit" }
+kotlinx-immutableCollections = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable-jvm", version.ref = "kotlinx-immutable-collections" }
+sqldelight-androidDriver = { module = "com.squareup.sqldelight:android-driver", version.ref = "sqldelight" }
+sqldelight-coroutinesExtensions = { module = "com.squareup.sqldelight:coroutines-extensions", version.ref = "sqldelight" }
+sqldelight-jvmDriver = { module = "com.squareup.sqldelight:sqlite-driver", version.ref = "sqldelight" }
+square-logcat = { module = "com.squareup.logcat:logcat", version.ref = "square-logcat" }
+
+# Plugin libraries for build-logic's convention plugins to use to resolve the types/tasks coming from these plugins
+android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "androidGradlePlugin" }
+kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
+[bundles]
+
+[plugins]
+
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+dependencyAnalysis = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependencyAnalysis" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlinKapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+kotlinMultiPlatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+molecule = { id = "app.cash.molecule", version.ref = "molecule" }
+sqldelight = { id = "com.squareup.sqldelight", version.ref = "sqldelight" }
+whetstone = { id = "com.deliveryhero.whetstone", version.ref = "whetstone" }
