@@ -1,5 +1,6 @@
 plugins {
   id("shape.kotlin.library.multiplatform")
+  id("shape.ktlint")
   @Suppress("DSL_SCOPE_VIOLATION")
   alias(libs.plugins.sqldelight)
 }

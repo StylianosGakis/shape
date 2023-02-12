@@ -1,6 +1,7 @@
 plugins {
   id("shape.android.library")
   id("shape.android.library.compose")
+  id("shape.ktlint")
 }
 
 android {

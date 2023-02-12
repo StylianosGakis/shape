@@ -2,6 +2,7 @@
 plugins {
   id("shape.android.application")
   id("shape.android.application.compose")
+  id("shape.ktlint")
   alias(libs.plugins.whetstone)
 }
 

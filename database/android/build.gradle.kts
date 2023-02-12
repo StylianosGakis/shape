@@ -1,5 +1,6 @@
 plugins {
   id("shape.android.library")
+  id("shape.ktlint")
   @Suppress("DSL_SCOPE_VIOLATION")
   alias(libs.plugins.whetstone)
 }

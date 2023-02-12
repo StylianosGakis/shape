@@ -10,8 +10,9 @@ java {
 }
 
 dependencies {
-  implementation(libs.android.gradlePlugin)
-  implementation(libs.kotlin.gradlePlugin)
+  compileOnly(libs.android.gradlePlugin)
+  compileOnly(libs.kotlin.gradlePlugin)
+  compileOnly(libs.kotlinter.gradlePlugin)
 
   // Enables using type-safe accessors to reference plugins from the [plugins] block defined in version catalogs.
   // Context: https://github.com/gradle/gradle/issues/15383#issuecomment-779893192
@@ -32,5 +33,6 @@ gradlePlugin {
     createPlugin("shape.android.library.compose", "LibraryComposeConventionPlugin")
     createPlugin("shape.kotlin.library.jvm", "KotlinJvmLibraryConventionPlugin")
     createPlugin("shape.kotlin.library.multiplatform", "KotlinMultiplatformLibraryConventionPlugin")
+    createPlugin("shape.ktlint", "KotlinterConventionPlugin")
   }
 }
